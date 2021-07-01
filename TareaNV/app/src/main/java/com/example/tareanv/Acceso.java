@@ -58,9 +58,10 @@ public class Acceso extends AppCompatActivity implements NavigationView.OnNaviga
         Glide.with(this).load(userLogin.getFoto()).centerCrop().into(img_foto);
 
 
-        if(txt_userName.getText()==userLogin.getUsername()){
-            Menu menu = navigationView.getMenu();
+        String tipoUser="user";
 
+        if(txt_userName.getText().toString().equals(tipoUser)){
+            Menu menu = navigationView.getMenu();
             MenuItem item = menu.findItem(R.id.amigos);
             item.setVisible(false);
         }
